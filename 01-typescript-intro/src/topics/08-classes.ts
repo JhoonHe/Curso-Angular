@@ -19,3 +19,21 @@ const { name: _name, } = person_two;
 console.log({ name, address });
 console.log(_name);
 
+class Hero {
+
+    // public person: Person;
+
+    constructor(
+        public alterEgo: string,
+        public age: number,
+        public realName: string,
+        public person: Person
+    ) {
+        // this.person = new Person(realName, 'New York');
+    }
+}
+
+const tony = new Person('Tony Stark', 'New York');
+const hero = new Hero('Ironman', 45, 'Tony', tony);
+
+console.log(hero);
